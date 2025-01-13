@@ -8,7 +8,7 @@ Le "mode switcher" est en fait la fonctionnalité de nos applications qui nous p
 1. Clonez le dépôt :
    ```bash
    git clone <URL_DU_DEPOT>
-   cd bloc_note
+   cd mode_switcher
    ```
 
 2. Installez les dépendances :
