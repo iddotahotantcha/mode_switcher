@@ -17,7 +17,9 @@ class _ModeSwitcherScreenState extends State<ModeSwitcherScreen> {
 
     // Changer la couleur du fond et de l'image selon l'état du Switch
     Color containerColor = _greyOn ? Color(0xFFEEBB22) : Color(0xFF1956E2); // Changer la couleur
+    String yearValue = _greyOn ? "2025" : "2024"; // Changer l'image
     String imagePath = _greyOn ? "assets/images/image-2.jpg" : "assets/images/image-1.jpg"; // Changer l'image
+    
 
     return Scaffold(
       body: Container(
@@ -72,7 +74,7 @@ class _ModeSwitcherScreenState extends State<ModeSwitcherScreen> {
                     left: 15.0,
                   ),
                   child: Text(
-                    "2024",
+                    yearValue,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 50.0,
