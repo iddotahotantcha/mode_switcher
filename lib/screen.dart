@@ -14,12 +14,17 @@ class _ModeSwitcherScreenState extends State<ModeSwitcherScreen> {
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
+
+    // Changer la couleur du fond et de l'image selon l'état du Switch
+    Color containerColor = _greyOn ? Color(0xFFEEBB22) : Color(0xFF1956E2); // Changer la couleur
+    String imagePath = _greyOn ? "assets/images/image-2.jpg" : "assets/images/image-1.jpg"; // Changer l'image
+
     return Scaffold(
       body: Container(
         height: screenHeight,
         width: screenWidth,
         decoration: BoxDecoration(
-          color: Color(0xFF1956E2),
+          color: containerColor, // Appliquer la couleur dynamique
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -95,8 +100,8 @@ class _ModeSwitcherScreenState extends State<ModeSwitcherScreen> {
             ),
             SizedBox(height: 20.0),
             Container(
-              height: screenHeight-250.0,
-              width: screenWidth-20.0,
+              height: screenHeight - 250.0,
+              width: screenWidth - 20.0,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10.0),
@@ -104,9 +109,7 @@ class _ModeSwitcherScreenState extends State<ModeSwitcherScreen> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(10.0),
                 child: Image(
-                  image: AssetImage(
-                    "assets/images/image-1.jpg"
-                  ),
+                  image: AssetImage(imagePath), // Utiliser le chemin d'image dynamique
                   fit: BoxFit.cover,
                 ),
               ),
